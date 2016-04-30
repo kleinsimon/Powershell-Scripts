@@ -38,7 +38,7 @@ ForEach ($dir in $folders) {
 	$log = "-LOG:${logpath}\"+(Get-Date -Format "yyyy_mm_dd_hh-mm")+"_${dir}.log"
 	
 	"Copy $srcpath --> $dstpath..."
-	#Invoke-Expression "robocopy $srcpath $dstpath $options $log"
+	Invoke-Expression "robocopy $srcpath $dstpath $options $log"
 }
 
 cmd /c rmdir "$tmplink"
